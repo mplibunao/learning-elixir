@@ -1,11 +1,19 @@
 defmodule Cards do
   def create_deck do
-   ["Ace", "Two", "Three"] 
+   values = ["Ace", "Two", "Three", "Four", "Five"] 
+   suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
+
+   # Comprehension is basically a map
+   for value <- values do
+     for suit <- suits do
+       "#{value} of #{suit}"
+     end
+   end 
   end
 
   def shuffle(deck) do
    Enum.shuffle(deck) 
-   end
+  end
 
   def contains?(deck, card) do
    Enum.member?(deck, card) 
