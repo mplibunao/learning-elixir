@@ -4,10 +4,8 @@ defmodule Cards do
    suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
 
    # Comprehension is basically a map
-   for value <- values do
-     for suit <- suits do
-       "#{value} of #{suit}"
-     end
+   for suit <- suits, value <- values do
+     "#{value} of #{suit}"
    end 
   end
 
