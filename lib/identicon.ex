@@ -10,9 +10,7 @@ defmodule Identicon do
   end
 
   def pick_color(image) do
-    %Identicon.Image{hex: hex_list} = image
-    [r, g, b | _tail ] = hex_list
-
+    %Identicon.Image{hex: h[r, g, b | _tail ]} = image
     [r, g, b]
   end
 
