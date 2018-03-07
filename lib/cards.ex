@@ -35,6 +35,7 @@ defmodule Cards do
   end
 
   def create_hand(hand_size) do
+    # Pipe operator requires us to have consistent 1st arguments
     Cards.create_deck
     |> Cards.shuffle
     |> Cards.deal(hand_size)
