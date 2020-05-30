@@ -26,7 +26,6 @@ defmodule KV.Registry do
     GenServer.cast(server, {:create, name})
   end
 
-
   ## Defining GenServer Callbacks
 
   @impl true

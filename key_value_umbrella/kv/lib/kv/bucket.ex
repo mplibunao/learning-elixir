@@ -5,7 +5,7 @@ defmodule KV.Bucket do
   Starts a new bucket
   """
   def start_link(_opts) do
-    Agent.start_link fn -> %{} end
+    Agent.start_link(fn -> %{} end)
   end
 
   @doc """
