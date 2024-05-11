@@ -1,5 +1,6 @@
 defmodule Debugging do
   def some_fun(a,b,c) do
+    name = "wat"
     IO.inspect binding()
   end
 end
