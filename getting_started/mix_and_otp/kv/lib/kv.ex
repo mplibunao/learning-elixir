@@ -9,11 +9,10 @@ defmodule KV do
   we can now expect the KV.Registry process to be up as soon as we start `iex -S mix`
 
     ```
-    iex(1)> KV.Registry.create(KV.Registry, "shopping")
+    # iex(1)> KV.Registry.create(KV.Registry, "shopping")
     :ok
-    iex(2)> KV.Registry.lookup(KV.Registry, "shopping")
+    # iex(2)> KV.Registry.lookup(KV.Registry, "shopping")
     {:ok, #PID<0.151.0>}
-    iex(3)>
     ```
   """
   use Application
