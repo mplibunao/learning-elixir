@@ -12,9 +12,16 @@ defmodule KV.MixProject do
   end
 
   # Run "mix help compile.app" to learn about applications.
+  @doc """
+    mod specifies "application callback module"
+    any module that implements Application behaviour
+
+    since we specified KV as the module callback, we change KV module (lib/kv.ex) to have it start the supervisor (which starts other services)
+  """
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger],
+      mod: {KV, []}
     ]
   end
 
