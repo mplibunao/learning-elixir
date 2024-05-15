@@ -3,7 +3,8 @@ defmodule KV.BucketTest do
 
   setup do
     {:ok, bucket} = start_supervised(KV.Bucket)
-    %{bucket: bucket} # ExUnit will merge this into the test context
+    # ExUnit will merge this into the test context
+    %{bucket: bucket}
   end
 
   test "stores value by key", %{bucket: bucket} do
