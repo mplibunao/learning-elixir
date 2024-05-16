@@ -11,6 +11,7 @@ defmodule KVServerTest do
   setup do
     opts = [:binary, packet: :line, active: false]
     # TCP client that sends requests to server
+    # Note the charlist here (usually used in old erlang libs)
     {:ok, socket} = :gen_tcp.connect(~c"localhost", 4040, opts)
     %{socket: socket}
   end

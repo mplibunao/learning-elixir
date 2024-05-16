@@ -69,6 +69,7 @@ defmodule KVServer.Command do
     end)
   end
 
+  # probably obvious but when lookup doesn't match with `{:ok, pid}`, it doesn't even call the callback hence you will always get "NOT FOUND"
   defp lookup(bucket, callback) do
     case KV.Registry.lookup(KV.Registry, bucket) do
       {:ok, pid} -> callback.(pid)
